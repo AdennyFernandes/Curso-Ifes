@@ -14,11 +14,12 @@
             "previewLimit": 50,
             "server": "localhost",
             "port": 3306,
+            "askForPassword": true,
             "driver": "MySQL",
-            "name": "docker mysql",
+            "name": "MySQL",
+            "database": "cursoifes",
             "username": "root",
-            "database": "MySQL database",
-            "password": ""
+            "connectionTimeout": 60
         }
     ]
 }
