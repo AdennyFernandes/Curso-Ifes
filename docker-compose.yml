@@ -31,3 +31,4 @@ services:
             - "php"
 volumes:
     db_data:
+    
