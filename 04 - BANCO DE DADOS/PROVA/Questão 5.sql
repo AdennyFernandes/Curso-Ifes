@@ -38,7 +38,8 @@ id_customers	cnpj        	contact
 
 -- EXEMPLO DE SAÍDA ESPERADO
 name	
-Nicolas Diogo Cardoso	
+Nicolas Diogo Cardoso
+Sabrina H. G. Barros	
 =======
 -- ENUNCIADO
 
@@ -80,5 +81,5 @@ id_customers	cnpj        	contact
 -- EXEMPLO DE SAÍDA ESPERADO
 name	
 Nicolas Diogo Cardoso	
+Sabrina H. G. Barros
 >>>>>>> fcd271c1655f8458f57477566e233cc911641638
-Sabrina Heloisa Gabriela Barros
