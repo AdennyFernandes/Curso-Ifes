@@ -2,15 +2,15 @@
     "sqltools.connections": [
         {
             "mysqlOptions": {
-                "authProtocol": "xprotocol"
+                "authProtocol": "default"
             },
             "previewLimit": 50,
             "server": "127.0.0.1",
             "port": 3306,
             "askForPassword": true,
-            "driver": "MariaDB",
+            "driver": "MySQL",
             "name": "docker mysql",
-            "database": "cursoifes",
+            "database": "docker mysql",
             "username": "root"
         }
     ]
