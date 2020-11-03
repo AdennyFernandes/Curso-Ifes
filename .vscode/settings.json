@@ -1,11 +1,4 @@
 {
-    "gitflow4code.features": [
-        {
-            "name": "master",
-            "base": "develop"
-        }
-    ],
-    "liveServer.settings.port": 5503,
     "sqltools.connections": [
         {
             "mysqlOptions": {
