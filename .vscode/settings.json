@@ -10,7 +10,7 @@
             "askForPassword": true,
             "driver": "MySQL",
             "name": "docker mysql",
-            "database": "docker mysql",
+            "database": "cursoifes",
             "username": "root"
         }
     ]
