@@ -1,7 +1,7 @@
 {
     "gitflow4code.features": [
         {
-            "name": "feature/webdesing",
+            "name": "master",
             "base": "develop"
         }
     ],
