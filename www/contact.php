@@ -37,12 +37,8 @@
                         <img class="header__photo-img" src="assets/img/my_profile.jpg" alt="Adenny Fernandes">
                     </div>
                     <div class="header__base-info">
-                        <h4 class="title titl--h4">
-                            <font color="Crimson">Adenny Fernandes</font>
-                        </h4>
-                        <div class="status">
-                            <font color="Crimson">Aprendiz à Programador Web</font>
-                        </div>
+                        <h4 class="title titl--h4">Adenny Fernandes</h4>
+                        <div class="status">Programador Web</div>
                         <ul class="header__social">
                             <li>
                                 <a href="https://www.linkedin.com/in/adenny-fernandes-a2b32b190/">
@@ -160,7 +156,8 @@
                         </form><br><br><br>
 
                         <div class="map" id="map">
-                            <iframe src="https://www.google.com.br/maps/@-20.3027165,-40.2994158,15z?hl=pt-PT"
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.824943304019!2d-46.82046378548918!3d-23.646439470623644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce54a94ba3ac0d%3A0x86dcf699b8be9412!2sParque%20Luiza%2C%20Embu%20das%20Artes%20-%20SP%2C%2006810-240!5e0!3m2!1spt-BR!2sbr!4v1599504382367!5m2!1spt-BR!2sbr"
                                 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
                                 aria-hidden="false" tabindex="0"></iframe>
                         </div>
