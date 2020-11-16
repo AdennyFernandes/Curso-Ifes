@@ -1,14 +1,10 @@
 <?php
-phpinfo();
-
-$pdo = null;
-
 try {
-    $pdo = new PDO('mysql:host=mysql;dbname=cursoifes', 'MYSQL_PASSWORD', 'root', 'MYSQL_ROOT_PASSWORD', 'root');
-} catch (PDOException $e) {
-    print $e->getMessage();
-    die();
+$conn = new PDO('mysql:host=localhost;dbname=cursoifes', 
+$username = 'root',
+$password = 'root');
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+echo 'ERROR: ' . $e->getMessage();
 }
-
-var_dump($pdo);
-echo "Glória à Deus";
+?>
