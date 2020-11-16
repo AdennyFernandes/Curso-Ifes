@@ -1,7 +1,8 @@
 version: "3.7"
 services:
     mysql:
-        image: mysql:latest         
+        image: mysql:latest        
+        container_name: curso-ifes_mysql_1         
         ports:
             - "3307:3306"
         volumes:
@@ -14,6 +15,7 @@ services:
     php:
         image: php:latest     
         build: ./docker/php
+        container_name: curso-ifes_php_1php
         ports:
         - "9000:9000"        
         volumes:
@@ -25,7 +27,8 @@ services:
             - MYSQL_USER=root
             - MYSQL_PASS=root    
     nginx:
-        image: nginx:latest        
+        image: nginx:latest
+        container_name: curso-ifes_nginx_1        
         ports:
             - "9999:80"
         volumes:
