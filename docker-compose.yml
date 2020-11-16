@@ -1,7 +1,7 @@
 version: "3.7"
 services:
     mysql:
-        image: mysql:8.0        
+        image: mysql:8.0.22        
         container_name: curso-ifes_mysql_1         
         ports:
             - "3307:3306"
