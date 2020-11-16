@@ -22,7 +22,7 @@ services:
             - ./www:/usr/share/nginx/html
             - ./docker/php/php.ini:/usr/local/etc/php/php.ini 
         depends_on:
-            - curso-ifes_mysql_1
+            - "mysql"
         environment: 
             - MYSQL_DATABASE= 'cursoifes'
             - MYSQL_ROOT_PASSWORD= 'root' 
@@ -35,8 +35,8 @@ services:
             - "./www:/usr/share/nginx/html/"
             - "./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf"        
         depends_on:
-        - "curso-ifes_php_1php"
-        - "curso-ifes_mysql_1"
+        - "php"
+        
 volumes:
     db_data:
     
