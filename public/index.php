@@ -11,3 +11,4 @@ try {
 }
 
 var_dump($pdo);
+echo "Glória à Deus";
