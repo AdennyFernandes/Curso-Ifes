@@ -1,10 +1,10 @@
-  <?php
+<?php
 phpinfo();
 
 $pdo = null;
 
 try {
-    $pdo = new PDO('mysql:host=mysql;dbname=database', 'root', '12345');
+    $pdo = new PDO('mysql:host=mysql;dbname=cursoifes', 'MYSQL_PASSWORD', 'root', 'MYSQL_ROOT_PASSWORD', 'root');
 } catch (PDOException $e) {
     print $e->getMessage();
     die();
