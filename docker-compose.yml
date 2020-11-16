@@ -30,7 +30,7 @@ services:
         image: nginx:latest
         container_name: curso-ifes_nginx_1        
         ports:
-            - "8080:80"
+            - "9999:80"
         volumes:
             - "./www:/usr/share/nginx/html/"
             - "./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf"        
