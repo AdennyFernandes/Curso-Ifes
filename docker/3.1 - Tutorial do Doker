@@ -14,7 +14,16 @@
         - remover um container (sudo docker rm < id container >)
         - remover uma imagem (sudo docker rmi < id imagem >)
 
---TUTORIAL DO DOCKER WINDOWS 
+--TUTORIAL DO DOCKER WINDOWS
+Ver ajuda no Docker
+docker help
+
+Iniciar um container
+docker start id do container
+
+Parar um container
+docker stop id do container
+
 Ver as imagens baixadas
 docker images
 
