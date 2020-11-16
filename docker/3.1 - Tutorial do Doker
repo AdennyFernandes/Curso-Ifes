@@ -99,7 +99,7 @@ docker container rm <container ID>
 
 Para deletar múltiplos containers, digite
 docker container rm <container ID> <container ID> 
-     
+
 
 
 
