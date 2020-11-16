@@ -22,7 +22,7 @@ Iniciar um container
 docker start id do container
 
 Parar um container
-docker stop id do container
+docker stop id ou nome container
 
 Ver as imagens baixadas
 docker images
