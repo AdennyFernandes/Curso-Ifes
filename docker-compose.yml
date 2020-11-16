@@ -34,9 +34,9 @@ services:
         volumes:
             - "./www:/usr/share/nginx/html/"
             - "./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf"        
-        links:
-        - php
-        - mysql
+        depends_on:
+        - "curso-ifes_php_1php"
+        - "curso-ifes_mysql_1"
 volumes:
     db_data:
     
