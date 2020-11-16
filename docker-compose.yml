@@ -8,10 +8,10 @@ services:
         volumes:
             - mysql/var/lib/mysql/
         environment:
-            - MYSQL_DATABASE= 'cursoifes' 
-            - MYSQL_USER= 'root'
-            - MYSQL_PASSWORD= 'root'
-            - MYSQL_ROOT_PASSWORD= 'root'       
+            - MYSQL_DATABASE= 'cursoifes'
+            - MYSQL_ROOT_PASSWORD= 'root' 
+            - MYSQL_USER= 'root'  
+            
     php:
         image: php:latest     
         build: ./docker/php
@@ -20,7 +20,12 @@ services:
         - "9000:9000"        
         volumes:
             - ./www:/usr/share/nginx/html
-            - ./docker/php/php.ini:/usr/local/etc/php/php.ini        
+            - ./docker/php/php.ini:/usr/local/etc/php/php.ini 
+        depends_on:
+            - curso-ifes_mysql_1
+        environment: 
+            - MYSQL_DATABASE= 'cursoifes'
+            - MYSQL_ROOT_PASSWORD= 'root' 
     nginx:
         image: nginx:latest
         container_name: curso-ifes_nginx_1        
@@ -33,5 +38,5 @@ services:
         - php
         - mysql
 volumes:
-    mysql:
+    db_data:
     
