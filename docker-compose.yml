@@ -1,7 +1,7 @@
 version: "3"
 services:
     mysql:
-        image: mysql:5.7
+        image: "mysql:latest"
         environment:
             - MYSQL_USER=root
             - MYSQL_ROOT_PASSWORD=root
@@ -18,7 +18,7 @@ services:
             - ./www:/usr/share/nginx/html
             - ./docker/php/php.ini:/usr/local/etc/php/php.ini
         depends_on:
-            - mysql
+            - "mysql"
         environment:
             - MYSQL_USER=root
             - MYSQL_PASSWORD=root
