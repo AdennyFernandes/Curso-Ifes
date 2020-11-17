@@ -9,7 +9,7 @@ services:
             - mysql/var/lib/mysql/
         environment:
             - MYSQL_DATABASE= 'cursoifes'
-            - MYSQL_ROOT_PASSWORD= 'root' 
+            - MYSQL_PASSWORD= 'root' 
             - MYSQL_USER= 'root'  
             
     php:
@@ -25,7 +25,7 @@ services:
             - "mysql"
         environment: 
             - MYSQL_DATABASE= 'cursoifes'
-            - MYSQL_ROOT_PASSWORD= 'root' 
+            - MYSQL_PASSWORD= 'root' 
     nginx:
         image: nginx:latest
         container_name: curso-ifes_nginx_1        
