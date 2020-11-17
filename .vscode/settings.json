@@ -9,16 +9,17 @@
     "sqltools.connections": [
         {
             "mysqlOptions": {
-                "authProtocol": "default"
+                "authProtocol": "xprotocol"
             },
             "previewLimit": 50,
+            "askForPassword": true,
             "server": "localhost",
             "port": 3306,
-            "askForPassword": true,
             "driver": "MySQL",
             "name": "Local instance MySQL80",
             "database": "cursoifes",
-            "username": "root"
+            "username": "root",
+            "socketPath": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0 CE\\MySQLWorkbench.exe"
         }
     ]
 }
