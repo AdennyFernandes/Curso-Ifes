@@ -1,42 +1,43 @@
-version: "3.7"
+version: "3"
 services:
     mysql:
-        image: mysql:8.0.22        
-        container_name: curso-ifes_mysql_1         
-        ports:
-            - "3307:3306"
-        volumes:
-            - mysql/var/lib/mysql/
+        image: mysql:5.7
         environment:
-            - MYSQL_DATABASE= 'cursoifes'
-            - MYSQL_PASSWORD= 'root' 
-            - MYSQL_USER= 'root'  
-            
-    php:
-        image: php:latest     
-        build: ./docker/php
-        container_name: curso-ifes_php_1php
+            - MYSQL_USER=root
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=cursoifes
         ports:
-        - "9000:9000"        
+            - 3306:3306
+        volumes:
+            - ./docker/mysql/:/var/lib/mysql
+        networks:
+            - rede_docker
+    php:
+        build: ./docker/php
         volumes:
             - ./www:/usr/share/nginx/html
-            - ./docker/php/php.ini:/usr/local/etc/php/php.ini 
+            - ./docker/php/php.ini:/usr/local/etc/php/php.ini
         depends_on:
-            - "mysql"
-        environment: 
-            - MYSQL_DATABASE= 'cursoifes'
-            - MYSQL_PASSWORD= 'root' 
+            - mysql
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_PASSWORD=root
+            - MYSQL_DATABASE=cursoifes
+            - MYSQL_DRIVER=pdo_mysql
+            - MYSQL_HOST=mysql
+        networks:
+            - rede_docker
     nginx:
-        image: nginx:latest
-        container_name: curso-ifes_nginx_1        
+        image: "nginx:latest"
+        volumes:
+            - ./www:/usr/share/nginx/html
+            - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
         ports:
             - "9999:80"
-        volumes:
-            - "./www:/usr/share/nginx/html/"
-            - "./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf"        
         depends_on:
-        - "php"
-        
-volumes:
-    db_data:
-    
+            - "php"
+        networks:
+            - rede_docker
+networks:
+    rede_docker:
+        driver: bridge
