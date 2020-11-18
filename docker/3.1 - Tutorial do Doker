@@ -54,6 +54,12 @@ docker rm "id do container' (remover aspas)
 Remover a força o container
 docker rm -f "id do container' (remover aspas)
 
+MySQL no Docker
+docker run --name namedatabase -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:latest
+
+Entrar no Administrativo do MySQL
+docker exec -it namedatabase mysql -p  (inserir senha)
+
 --IMAGENS OFICIAIS
 https://hub.docker.com/_/docker
 docker image pull docker
