@@ -6,20 +6,5 @@
         }
     ],
     "liveServer.settings.port": 5503,
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "xprotocol"
-            },
-            "previewLimit": 50,
-            "askForPassword": true,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "Local instance MySQL80",
-            "database": "cursoifes",
-            "username": "root",
-            "socketPath": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0 CE\\MySQLWorkbench.exe"
-        }
-    ]
+    "sqltools.connections": []
 }
