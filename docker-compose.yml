@@ -7,17 +7,16 @@ services:
             - MYSQL_DATABASE=cursoifes
             - MYSQL_USER=root
             - MYSQL_ROOT_PASSWORD=root            
-            
         ports:
             - 3306:3306
         volumes:
-            - ./docker/mysql/:/var/lib/mysql
+            - ./mysql/var/lib/mysql/ 
         networks:
             - rede_docker
     php:
-        image: php:latest     
-        build: ./docker/php
-        
+        image: php:latest 
+
+        build: ./docker/php        
         ports:
         - 9000:9000
         volumes:
