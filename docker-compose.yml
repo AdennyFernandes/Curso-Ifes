@@ -2,7 +2,7 @@ version: "3.7"
 services:
     mysql:
         image: mysql:latest        
-        
+        container_name: curso-ifes_mysql_1 
         environment:
             - MYSQL_DATABASE=cursoifes
             - MYSQL_USER=root
@@ -15,7 +15,7 @@ services:
             - rede_docker
     php:
         image: php:latest 
-
+        container_name: curso-ifes_php_1 
         build: ./docker/php        
         ports:
         - 9000:9000
@@ -33,7 +33,7 @@ services:
         networks:
             - rede_docker
     nginx:
-        
+        container_name: curso-ifes_nginx_1 
         image: "nginx:latest"
         volumes:
             - ./www:/usr/share/nginx/html
