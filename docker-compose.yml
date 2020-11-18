@@ -6,8 +6,7 @@ services:
         environment:
             - MYSQL_DATABASE=cursoifes
             - MYSQL_USER=root
-            - MYSQL_ROOT_PASSWORD=root
-            - MYSQL_PASSWORD=root
+            - MYSQL_ROOT_PASSWORD=root            
             
         ports:
             - 3306:3306
