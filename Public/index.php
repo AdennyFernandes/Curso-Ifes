@@ -1,24 +1,13 @@
 <?php
+phpinfo();
 
-/**
-*
-* @return \PDo
+$pdo = null;
 
-function getConnection(){
-
-    $dsn = 'mysql:host=localhost;dbname=cursoifes';
-    $user = 'root';
-    $pass = 'root';
-
-    try {
-
-        $pdo = new PDO($dsn, $user, $pass );
-
-        return $pdo;
-    } catch (PDOException $ex) {
-
-    echo 'erro: '.$ex->getmessage();
-
-    }
-
+try {
+    $pdo = new PDO('mysql:host=mysql;dbname=cursoifes', 'root', 'root');
+} catch (PDOException $e) {
+    print $e->getMessage();
+    die();
 }
+
+var_dump($pdo);
