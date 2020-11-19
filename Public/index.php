@@ -1,5 +1,8 @@
 <?php
 
+/**
+*
+* @return \PDo
 
 function getConnection(){
 
